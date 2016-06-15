@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insertion</title>
+</head>
+<body>
+
+<form name="insForm" novalidate>
+    <Label>
+        Name:
+        <input type="text" ng-model="detailsCtrl.contact.name" name="fieldName" id="fieldName" required>
+    </Label>
+    <br/>
+    <Label>
+        Last Name:
+        <input type="text" ng-model="detailsCtrl.contact.lastname" name="fieldLastName" id="fieldLastName" required>
+    </Label>
+    <br/>
+    <Label>
+        Email:
+        <input type="email" ng-model="detailsCtrl.contact.email" name="fieldEmail" id="fieldEmail">
+    </Label>
+    <br/>
+    <Label>
+        Phone Number:
+        <input type="text" ng-model="detailsCtrl.contact.phone" name="fieldPhone" id="fieldPhone">
+    </Label>
+    <br/>
+
+
+    <button type="submit" ng-disabled="!insForm.$valid"> Submit </button>
+    <button type="reset">Reset</button>
+</form>
+
+</body>
+</html>

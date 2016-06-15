@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .spin{
+            background-color: #00b3ee;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Contacts</h1>
+
+<input type="text" ng-model="searchText" />
+<!--<p ng-class="{'spin': var === 'spin' }">{{var}}</p>-->
+
+<ul ng-repeat="c in contactListController.contacts | filter:searchText">
+    <li>
+        <a ui-sref="app.contactDetails({name:c.name, lastname:c.lastname})">
+            {{c.name | capFilter}} {{c.lastname | capFilter}}
+        </a>
+    </li>
+</ul>
+
+
+</body>
+</html>

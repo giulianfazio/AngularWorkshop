@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insertion</title>
+</head>
+<body>
+
+<form name="insForm" action="#/welcome" novalidate>
+    <Label>
+        Name:
+        <input type="text" ng-model="contact.name" name="fieldName" id="fieldName" required>
+    </Label>
+    <Label>
+        Email:
+        <input type="email" ng-model="contact.email" name="fieldEmail" id="fieldEmail">
+    </Label>
+    <Label>
+        Phone Number:
+        <input type="text" ng-model="contact.phone" name="fieldPhone" id="fieldPhone">
+    </Label>
+
+    <button type="submit" ng-disabled="!insForm.$valid"> Submit </button>
+</form>
+
+</body>
+</html>
